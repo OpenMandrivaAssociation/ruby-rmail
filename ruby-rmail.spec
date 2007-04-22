@@ -3,14 +3,14 @@
 %define name  ruby-%{rname}
 
 %define version 0.17
-%define release 1mdk
+%define release %mkrel 2
 
 Summary: An Email/MIME library for Ruby
 Name: %name
 Version: %version
 Release: %release
 License: BSD-like
-Group: Development/Other
+Group: Development/Ruby
 URL: http://www.lickey.com/rubymail/
 Source0: http://www.lickey.com/rubymail/download/%{oname}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-buildroot
@@ -18,9 +18,6 @@ BuildArch: noarch
 BuildRequires: ruby 
 Requires: ruby
 Provides: %{oname}
-
-%{expand:%%define ruby_libdir %(ruby -rrbconfig -e "puts Config::CONFIG['sitelibdir']")}
-%{expand:%%define ruby_archdir %(ruby -rrbconfig -e "puts Config::CONFIG['sitearchdir']")}
 
 %description
 This is RubyMail, a lightweight mail library containing various mail utility
@@ -46,6 +43,6 @@ ruby install.rb install --prefix=%buildroot
 
 %files
 %defattr(-,root,root)
-%{ruby_libdir}/%{rname}*
+%{ruby_sitelibdir}/%{rname}*
 %doc NEWS NOTES README THANKS TODO doc/ guide/
 
