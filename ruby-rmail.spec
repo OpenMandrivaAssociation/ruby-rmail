@@ -13,7 +13,6 @@ License: BSD-like
 Group: Development/Ruby
 URL: http://www.lickey.com/rubymail/
 Source0: http://www.lickey.com/rubymail/download/%{oname}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 BuildRequires: ruby 
 Requires: ruby
