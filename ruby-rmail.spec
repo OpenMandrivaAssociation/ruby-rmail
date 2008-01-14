@@ -2,8 +2,8 @@
 %define oname rubymail
 %define name  ruby-%{rname}
 
-%define version 0.17
-%define release %mkrel 2
+%define version 1.0.0
+%define release %mkrel 1
 
 Summary: An Email/MIME library for Ruby
 Name: %name
@@ -12,7 +12,7 @@ Release: %release
 License: BSD-like
 Group: Development/Ruby
 URL: http://www.lickey.com/rubymail/
-Source0: http://www.lickey.com/rubymail/download/%{oname}-%{version}.tar.bz2
+Source0: http://www.lickey.com/rubymail/download/%{rname}-%{version}.tgz
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 BuildRequires: ruby 
@@ -27,12 +27,12 @@ Very high attention is paid to quality and robustness. This package has a
 complete unit test suite (requires RubyUnit to run).
 
 %prep
-%setup -q -n %{oname}-%{version}
+%setup -q -n %{rname}-%{version}
 
 %build
 ruby install.rb config
 ruby install.rb setup
-ruby tests/runtests.rb
+ruby test/runtests.rb
 
 %clean
 rm -rf %buildroot
@@ -44,5 +44,5 @@ ruby install.rb install --prefix=%buildroot
 %files
 %defattr(-,root,root)
 %{ruby_sitelibdir}/%{rname}*
-%doc NEWS NOTES README THANKS TODO doc/ guide/
+%doc NEWS NOTES README THANKS TODO guide/
 
