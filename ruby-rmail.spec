@@ -11,7 +11,7 @@ Version: %version
 Release: %release
 License: BSD-like
 Group: Development/Ruby
-URL: http://www.lickey.com/rubymail/
+URL: https://www.lickey.com/rubymail/
 Source0: http://www.lickey.com/rubymail/download/%{rname}-%{version}.tgz
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
