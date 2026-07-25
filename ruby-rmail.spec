@@ -3,7 +3,7 @@
 %define name  ruby-%{rname}
 
 %define version 1.0.0
-%define release %mkrel 5
+%define release 6
 
 Summary: An Email/MIME library for Ruby
 Name: %name
